@@ -1,0 +1,13 @@
+ALTER TABLE patient ADD COLUMN id INT AUTO_INCREMENT UNIQUE;
+
+
+ALTER TABLE  patient MODIFY ssnid INT ;
+
+
+DELETE FROM `management`.`patient` WHERE (`ssnid` = '1');
+
+ALTER TABLE `management`.`patient` 
+CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE patient DROP COLUMN id;

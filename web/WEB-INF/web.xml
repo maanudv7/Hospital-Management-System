@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>LoginServ</servlet-name>
+        <servlet-class>com.controller.LoginServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterServ</servlet-name>
+        <servlet-class>com.controller.RegisterServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteServ</servlet-name>
+        <servlet-class>com.controller.DeleteServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateServ</servlet-name>
+        <servlet-class>com.controller.UpdateServ</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchServ</servlet-name>
+        <servlet-class>com.controller.SearchServ</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>LoginServ</servlet-name>
+        <url-pattern>/LoginServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServ</servlet-name>
+        <url-pattern>/RegisterServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteServ</servlet-name>
+        <url-pattern>/DeleteServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateServ</servlet-name>
+        <url-pattern>/UpdateServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServ</servlet-name>
+        <url-pattern>/SearchServ</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

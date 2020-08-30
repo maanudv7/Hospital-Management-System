@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Medicine details</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <style>
+        table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  text-align:center; 
+    padding: 20px; 
+} 
+
+th,td {
+  border: 1px solid black;
+  text-align:center;
+
+    padding: 20px; 
+}
+</style>
+
+<script type="text/javascript">
+function showTable(){
+document.getElementById('table').style.visibility = "visible";
+}
+function hideTable(){
+document.getElementById('table').style.visibility = "hidden";
+}
+</script>
+</head>
+
+<body onload="hideTable()"  style="background-image: url(&quot;assets/img/Horizon.jpg&quot;);">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color: rgb(0,51,91);">
+        <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon" style="color: #c4d3dd;"></span></button>
+            <p style="color: #e0ddbc;font-size: 30px;font-family: Poppins, sans-serif;margin-bottom: 8px;">ABC HOSPITAL</p>
+            <div class="collapse navbar-collapse" id="navcol-1" style="height: 47px;">
+                <ul class="nav navbar-nav ml-auto" style="margin-left: 725px;padding-right: 0px;">
+                    <li class="nav-item dropdown show"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true" href="#" style="color: #c4d3dd;margin-right: 72px;font-size: 19px;">Patient</a>
+                        <div class="dropdown-menu show" role="menu" style="background-color: #00335b;"><a class="dropdown-item" role="presentation" href="patient_register.html" style="color: #c4d3dd;">Registration</a><a class="dropdown-item" role="presentation" href="update_patient.html" style="color: #c4d3dd;">Update Details</a>
+                            <a
+                                class="dropdown-item" role="presentation" href="delete_patient.html" style="color: #c4d3dd;">Delete Patient</a><a class="dropdown-item" role="presentation" href="search_patient.html" style="color: #c4d3dd;">Search Patients</a><a class="dropdown-item" role="presentation" href="discharge_patient.html" style="color: #c4d3dd;">Discharge Patient</a>
+                                <a
+                                    class="dropdown-item" role="presentation" href="billing_detail.html" style="color: #c4d3dd;">Billing Details</a><a class="dropdown-item" role="presentation" href="view_patients.html" style="color: #c4d3dd;">View Patients</a></div>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #c4d3dd;margin-right: 70px;font-size: 19px;">Pharmacy</a>
+                        <div class="dropdown-menu" role="menu" style="background-color: #00335b;"><a class="dropdown-item" role="presentation" href="medicine_issue.html" style="color: #c4d3dd;">Medicine Issued</a><a class="dropdown-item" role="presentation" href="new_medicine_issue.html" style="color: #c4d3dd;">Issue New Medicine</a>
+                            <a
+                                class="dropdown-item" role="presentation" href="medicine_stock.html" style="color: #c4d3dd;">Stock</a><a class="dropdown-item" role="presentation" href="add_new_medicine.html" style="color: #c4d3dd;">Add New Medicine</a></div>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #c4d3dd;font-size: 19px;">Diagnostics</a>
+                        <div class="dropdown-menu" role="menu" style="background-color: #00335b;"><a class="dropdown-item" role="presentation" href="diagnostics_done.html" style="color: #c4d3dd;">Diagonstics Done</a><a class="dropdown-item" role="presentation" href="new_diagnostic.html" style="color: #c4d3dd;">Allot New Test</a>
+                            <a
+                                class="dropdown-item" role="presentation" href="diagnostics_list.html" style="color: #c4d3dd;">List Of Tests</a><a class="dropdown-item" role="presentation" href="add_new_diagnostics.html" style="color: #c4d3dd;">Add New Diagnostics</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="row register-form" style="padding-right: 0;">
+        <div class="col-md-8 offset-md-2">
+            <form class="custom-form" style="background-color: rgba(71,186,235,0.13);padding: 55px;padding-top: 25px;padding-bottom: 25px;margin-top: 25px;margin-bottom: 25px;margin-right: 25px;margin-left: 25px;">
+                <h1 style="margin-bottom: 25px;">Issue medicine</h1>
+   
+    <div class="form-row form-group" style="margin-bottom: 5px;">
+                    <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field" style="font-size: 16px;padding-right: 5px;">Enter Patient ID</label></div>
+                    <div class="col-sm-6 input-column"><input class="form-control" type="text" id="patient_ssn_id" style="background-color: #ffffff; width: 80px; height: 40px;" required="">
+<button class="btn btn-light submit-button" type="button" id="fetch" value=" fetch" style="margin: 10px;padding: 10px; margin-top: -45px; margin-left: 100px;">Get details</button></div>
+                
+<br>
+    <br>              
+<br><br>
+
+
+                    <table style="background-color: white;">
+                      
+                                <tr style="background-color: DarkCyan;">
+                                    <th style="column-width: 60px;">Patient ID</th>
+                                    <th style="column-width: 200px;">Patient Name</th>
+                                    <th style="column-width: 60px;">Age</th>
+                                    <th style="column-width: 500px;">Address</th>
+                                    <th style="column-width: 150px;">DOJ</th>
+                                    <th style="column-width: 150px;">Type of room</th>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                    </table>
+
+
+
+    <h3 style="margin-left: 190px; margin-top: 30px;"> <b>Medicine issued in Past</b></h3></center>
+   
+
+    <table style="background-color: white; margin-left: 50px;">
+                      
+                                <tr style="background-color: DarkCyan;">
+                                    <th style="column-width: 200px;">Medicine</th>
+                                    <th style="column-width: 80px;">Quantity</th>
+                                    <th style="column-width: 80px;">Rate</th>
+                                    <th style="column-width: 100px;">Amount</th>
+                                </tr>
+
+                                <tr>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                    </table>
+<br>
+
+
+  <h2 style="margin-top: 60px; margin-left: 230px;"><b>Issue new Medicines</b></h2> 
+
+
+   <!-- Searching for medicine -->
+   
+       <div class="col-sm-6 input-column"><input class="form-control" type="text" id="patient_ssn_id" style="background-color: #ffffff; width: 250px; height: 50px; margin-left: 200px; margin-top: 32px;" required="" placeholder="Search for medicine"></div>
+       <input type="button" class="btn btn-light submit-button" value="Search" style="margin-left: 100px; ">        
+     
+      <div class="col-sm-6 input-column"><input class="form-control" type="text" id="patient_ssn_id" style="background-color: #ffffff; width: 250px; height: 50px; margin-left: 200px; " required="" placeholder="Add Quantity"></div>
+       <input type="button" class="btn btn-light submit-button" value="OK" style="margin-left: 100px;margin-top: -2px;  ">        
+     
+  <input type="button" class="btn btn-light submit-button" onClick='showTable();' value='Add Medicine' style="margin-left: 300px; ">
+   
+
+     <table id='table' style="background-color: white; margin-left: 50px; margin-top: -5px;">
+    
+         <tr style="background-color: DarkCyan;">
+                                    <th style="column-width: 200px;">Medicine</th>
+                                    <th style="column-width: 80px;">Quantity</th>
+                                    <th style="column-width: 80px;">Rate</th>
+                                    <th style="column-width: 100px;">Amount</th>
+                                </tr>
+                                <tr>
+                                    <td > </td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+     </table>
+
+          </div>
+        </form>
+    </div>
+</div>
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
